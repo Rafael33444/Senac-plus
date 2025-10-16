@@ -1,2 +1,2 @@
-# Senac-plus
-Site de venda de curso do senac
+# Senac-Plus
+Site de vendas de curso do senac 
