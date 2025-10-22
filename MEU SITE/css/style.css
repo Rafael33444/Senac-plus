@@ -1,0 +1,194 @@
+/* --- Estilos Globais e Reset --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    /* Fundo escuro, típico de sites de jogos */
+    color: #f0f0f0;
+    /* Cor do texto claro */
+}
+
+a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+/* --- CABEÇALHO (Header) --- */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 15px 40px;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+.menu a {
+    margin-left: 25px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+/* --- BANNER PRINCIPAL (A Sua Imagem!) --- */
+.banner-principal {
+    width: 100%;
+    max-height: 400px;
+    /* Limita a altura para o banner não ser muito grande */
+    overflow: hidden;
+}
+
+.imagem-banner {
+    /* CÓDIGO CHAVE PARA OCUPAR TODO O ESPAÇO DE LARGURA */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta a imagem para preencher o contêiner sem distorcer */
+    display: block;
+}
+
+/* --- SEÇÃO DE CONTEÚDO --- */
+.conteudo {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    /* Espaço após o banner */
+    padding: 0 20px;
+}
+
+.destaque {
+    background-color: #242424;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- GALERIA DE JOGOS (Cards de Produtos) --- */
+.galeria-jogos {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.galeria-jogos h2 {
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+/* Alinha os cards lado a lado usando Flexbox */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+}
+
+.card-jogo {
+    /* Define 3 cards por linha em telas grandes */
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card-jogo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.capa-jogo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-jogo h3 {
+    margin: 5px 0 5px;
+    color: #3b82f6;
+}
+
+.card-jogo p {
+    font-size: 14px;
+    color: #ccc;
+    padding: 0 15px;
+}
+
+.preco {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4CAF50;
+    /* Cor verde para preço normal */
+    margin: 10px 0;
+}
+
+.preco.promocao {
+    color: #FFC107;
+    /* Cor amarela para promoção */
+    text-decoration: underline;
+}
+
+.preco.free {
+    color: #3b82f6;
+    /* Cor azul para GRÁTIS */
+    font-size: 24px;
+}
+
+.botao-comprar {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.botao-comprar:hover {
+    background-color: #5a9bff;
+}
+
+/* --- RODAPÉ (Footer) --- */
+.rodape {
+    background-color: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* --- MEDIA QUERIES (Para telas menores/celular) --- */
+@media (max-width: 900px) {
+    .card-jogo {
+        /* Em telas menores, mostra 2 cards por linha */
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card-jogo {
+        /* Em telas de celular, mostra 1 card por linha */
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
